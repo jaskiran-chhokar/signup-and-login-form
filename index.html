@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css"> 
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=EB Garamond" rel="stylesheet">
+    </head>
+    <body>
+        <!-- MultiStep Form -->
+<div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form id="msform">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active">Create New Account</li>
+                    <li>Login</li>
+                    <li>Forgot Password?</li>
+                </ul>
+                <!-- fieldsets -->
+                <fieldset>
+                    <h2 class="fs-title"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Sign Up</h2>
+                    <h3 class="fs-subtitle">New to WebTML? Create your Account Here:</h3>
+                    <input type="email" name="email" placeholder="Email Address"/>
+                    <input type="password" name="password" placeholder="Password"/>
+                    <input type="password" name="password" placeholder="Confirm Password"/>
+                    <span style="text-align: center; color:#5991b2;">Already Have an Account?</span><input style="background-color: #fff !important;" type="button" name="next" class="next action-button-2" value="Log In"/>
+                    <br><input type="button" class="action-button" value="Sign Up"/>
+                </fieldset>
+                <fieldset>
+                    <h2 class="fs-title"><i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;Login</h2>
+                    <h3 class="fs-subtitle">Welcome to <strong>WebTML!</strong></h3>
+                    
+                    <input type="text" name="username" placeholder="Username/Email Address"/>
+                    <input type="password" name="password" placeholder="Password"/>
+                    <span style="text-align: center; color:#5991b2;">Don't Have an Account?</span><input type="button" name="previous" class="previous action-button-previous" value="Sign Up"/>
+                    &nbsp;&nbsp;&nbsp;<br>
+                    <input type="button" class="action-button" value="Log In"/>
+                    <input type="button" name="next" class="next action-button" value="Recover Password"/>
+                </fieldset>
+                <fieldset>
+                    <h2 class="fs-title"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;Forgot Your Password?</h2>
+                    <h3 class="fs-subtitle">Fill in your credentials</h3>
+                    <input type="text" name="email" placeholder="Email Address"/><br>
+                    <p style="text-align: center; color:#5991b2;">We will send you an invite to reset your Account shortly!</p><br>
+                    <span style="text-align: left; color:#5991b2;"></span><input style="margin-right: 30px; font-size: 16px;" type="button" name="previous" class="previous action-button-previous" value="Log In"/>
+                    <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                </fieldset>
+            </form>           
+        </div>
+    </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
