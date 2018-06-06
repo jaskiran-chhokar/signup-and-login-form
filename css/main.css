@@ -8,7 +8,7 @@
 html {
     height: 100%;
     margin-top: 20px;
-    background-image: url(back2.jpeg);
+    background-image: url(../assets/back2.jpeg);
     background-attachment: fixed;
     background-position: center; 
     background-repeat: no-repeat;
