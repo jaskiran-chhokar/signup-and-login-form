@@ -1,65 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Login Form</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/main.css"> 
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=EB Garamond" rel="stylesheet">
-    </head>
-    <body>
-        <!-- MultiStep Form -->
-<div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <form id="msform">
-                <!-- progressbar -->
-                <ul id="progressbar">
-                    <li class="active">Create New Account</li>
-                    <li>Login</li>
-                    <li>Forgot Password?</li>
-                </ul>
-                <!-- fieldsets -->
-                <fieldset>
-                    <h2 class="fs-title"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Sign Up</h2>
-                    <h3 class="fs-subtitle">New to WebTML? Create your Account Here:</h3>
-                    <input type="email" name="email" placeholder="Email Address"/>
-                    <input type="password" name="password" placeholder="Password"/>
-                    <input type="password" name="password" placeholder="Confirm Password"/>
-                    <span style="text-align: center; color:#5991b2;">Already Have an Account?</span><input style="background-color: #fff !important;" type="button" name="next" class="next action-button-2" value="Log In"/>
-                    <br><input type="button" class="action-button" value="Sign Up"/>
-                </fieldset>
-                <fieldset>
-                    <h2 class="fs-title"><i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;Login</h2>
-                    <h3 class="fs-subtitle">Welcome to <strong>WebTML!</strong></h3>
-                    
-                    <input type="text" name="username" placeholder="Username/Email Address"/>
-                    <input type="password" name="password" placeholder="Password"/>
-                    <span style="text-align: center; color:#5991b2;">Don't Have an Account?</span><input type="button" name="previous" class="previous action-button-previous" value="Sign Up"/>
-                    &nbsp;&nbsp;&nbsp;<br>
-                    <input type="button" class="action-button" value="Log In"/>
-                    <input type="button" name="next" class="next action-button" value="Recover Password"/>
-                </fieldset>
-                <fieldset>
-                    <h2 class="fs-title"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;Forgot Your Password?</h2>
-                    <h3 class="fs-subtitle">Fill in your credentials</h3>
-                    <input type="text" name="email" placeholder="Email Address"/><br>
-                    <p style="text-align: center; color:#5991b2;">We will send you an invite to reset your Account shortly!</p><br>
-                    <span style="text-align: left; color:#5991b2;"></span><input style="margin-right: 30px; font-size: 16px;" type="button" name="previous" class="previous action-button-previous" value="Log In"/>
-                    <input type="submit" name="submit" class="submit action-button" value="Submit"/>
-                </fieldset>
-            </form>           
-        </div>
-    </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+...
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|EB Garamond" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script  src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12"><!-- col-md-offset-4 -->
+        <form id="Login" name="Login" method="post">
+        <input type="hidden" id="Mode" name="Mode" value="">
+        <input type="hidden" id="m" name="m" value="">
+        
+        <progress class="form-progress-bar" min="0" max="100" value="0" step="33" aria-labelledby="form-progress-completion"></progress>
+        <ul id="progressbar">
+            <li id="indicator-one" class="form-progress-indicator one active">
+            <div class="li-text">Log In</div>
+            </li>
+            <li id="indicator-two" class="form-progress-indicator two">
+            <div class="li-text">Create New Account</div>
+            </li>
+            <li id="indicator-three" class="form-progress-indicator three">
+            <div class="li-text">Forgot Password?</div>
+            </li>
+        </ul>
+        
+        <fieldset>
+        <h2 id="fs-title" class="fs-title"></h2>
+        <h3 id="fs-subtitle" class="fs-subtitle"></h3>
+        <input onClick="ClearErrors(this)" type="text" name="txtUsername" id="txtUsername" placeholder="Username / Email Address" value />
+        <input onClick="ClearErrors(this)" type="password" name="txtPassword" id="txtPassword" placeholder="Password" value />
+        <br>
+        <p id="form-text" class="form-text"></p>
+        <div id="Forgot_ErrorMsg" style="PADDING-RIGHT: 7px"></div>
+        <br>
+        <input id="ddd" type="button" class="action-button g-recaptcha" data-sitekey="6Lf-dk0UAAAAAOXX1tMnF6LooaA_UQ8EjqDV3jWk" data-callback="rrr" value="" /><br>
+        <input id="forgot-password" type="button" name="next" class="next action-button-1" value="Forgot Your Password?" />
+        <span id="form-text2" class="form-text"></span>
+        <input id="go-to" type="button" name="next2" class="next action-button-2" value="" />
+        </fieldset>
+        </form>
+    </div>
+    </div>
+</div>
+
+
+<script>
+
+function rrr() {
+	
+ var xx = document.getElementById("m").value	
+	 
+ if (xx == "onSubmitForgot")
+ {
+	 if(MM_validateForm2New('Forgot_ErrorMsg','','','txtUsername','','RisEmail')){document.getElementById('Login').submit();}
+ } else if (xx == "onSubmitLogin")
+ {
+	 if(MM_validateForm2New('Forgot_ErrorMsg','','','txtUsername','','R','txtPassword','','R')){document.getElementById('Login').submit();}
+ } else if (xx == "onSubmitRegister")
+ {
+	 if(MM_validateForm2New('Forgot_ErrorMsg','','','txtUsername','','RisEmail')){document.getElementById('Login').submit();}
+ } else if (xx == "onSubmitReset")
+ {
+	 if(MM_validateForm2New('Forgot_ErrorMsg','','','txtPassword','','R')){document.getElementById('Login').submit();}
+ } 
+ grecaptcha.reset();
+}
+
+let formScreens = document.querySelectorAll("fieldset"),
+ indicatorOne = document.getElementById("indicator-one"),
+ indicatorTwo = document.getElementById("indicator-two"),
+ indicatorThree = document.getElementById("indicator-three"),
+ Button = document.getElementById("go-to"),
+ ForgotPassButton = document.getElementById("forgot-password"),
+ pw = document.getElementById("txtPassword");
+ un = document.getElementById("txtUsername");
+ fp = document.getElementById("forgot-password");
+
+function reset() {
+	
+	
+
+   indicatorOne.classList.remove('active');
+   indicatorTwo.classList.remove('active');
+   indicatorThree.classList.remove('active');
+   
+   
+   
+   pw.style.display="none";
+   un.style.display="inline-block";
+   fp.style.display="none";
+}
+
+function Activate(Id, Indicator) {
+  
+  reset();
+  
+  if (Id == 0) {pw.style.display="inline-block"; fp.style.display="inline-block";};
+  if (Id == 3) {pw.style.display="inline-block"; un.style.display="none";};
+  
+  var t1 = "<h2 class='fs-title'><i class='fa fa-user-circle-o' aria-hidden='true'></i>&nbsp;Login</h2>,<h2 class='fs-title'><i class='fa fa-user-plus' aria-hidden='true'></i>&nbsp;Sign Up</h2>,<h2 class='fs-title'><i class='fa fa-question-circle-o' aria-hidden='true'></i>&nbsp;Reset Password</h2>,<h2 class='fs-title'><i class='fa fa-question-circle-o' aria-hidden='true'></i>&nbsp;Reset Password</h2>";
+  var s1 = "<h3 class='fs-subtitle'>Welcome to <strong>WebTML!</strong></h3>,<h3 class='fs-subtitle'>New to WebTML? Create your Account Here:</h3>,<h3 class='fs-subtitle'>Fill in your credentials</h3>,<h3 class='fs-subtitle'>Type your new password here</h3>";
+  var m1 = ",We will send you an Email shortly!,We will send you an email to reset your password shortly!,You will be sent an e-mail confirming your password change.";
+  var r1 = "Don't Have an Account?,Already Have an Account?,Don't Have an Account?,";
+  var u1 = "onSubmitLogin,onSubmitRegister,onSubmitForgot,onSubmitReset";
+  var k1 = "Log In,Sign Up,Get Reset Link,Reset Password";
+  var j1 = "Sign Up!,Log In,Sign Up,";
+  var v1 = "1,0,1,";
+  var g1 = "indicator-two,indicator-one,indicator-two,";
+  var d1 = "Login,Register,Forgot,Reset";
+  
+  var t = t1.split(",");
+  var s = s1.split(",");
+  var m = m1.split(",");
+  var r = r1.split(",");
+  var u = u1.split(",");
+  var k = k1.split(",");
+  var j = j1.split(",");
+  var v = v1.split(",");
+  var g = g1.split(",");
+  var d = d1.split(",");
+  
+  document.getElementById("fs-title").innerHTML = t[Id];
+  document.getElementById("fs-subtitle").innerHTML = s[Id];
+  document.getElementById("form-text").innerHTML = m[Id];
+  document.getElementById("form-text2").innerHTML = r[Id];
+  document.getElementById("m").value = u[Id];
+  document.getElementById("ddd").value = k[Id];
+  document.getElementById("go-to").value = j[Id];
+  document.getElementById("go-to").setAttribute("data-callback", v[Id]);
+  document.getElementById("go-to").setAttribute("data-callback2", g[Id]);
+  document.getElementById("Mode").value = d[Id];
+  
+  if (Indicator) {Indicator.classList.add('active')};
+}
+
+Button.addEventListener("click", function () {
+ Activate(Button.getAttribute("data-callback"), document.getElementById(Button.getAttribute("data-callback2")));
+});
+
+ForgotPassButton.addEventListener('click', function () {
+ Activate(2, indicatorThree);
+});
+
+
+
+indicatorOne.addEventListener("click", function () {
+ Activate(0, indicatorOne); //click on indicator one (leads to log in screen)
+});
+
+indicatorTwo.addEventListener("click", function () {
+ Activate(1, indicatorTwo); //click on indicator two (leads to sign up screen)
+});
+
+indicatorThree.addEventListener("click", function () {
+ Activate(2, indicatorThree); //click on indicator three (leads to forgot password screen)
+});
+
+Activate(0, indicatorOne);
+
+
+
+</script>
+
+</body>
 </html>
