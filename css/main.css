@@ -303,6 +303,11 @@ div.li-text {
         width: 70%; 
         margin-top: 5%; 
     }
+    #Login fieldset {
+        padding: 50px 40px; 
+        width: 90%; 
+        margin: 0 5%; 
+    }
 }
 
 @media screen and (min-width: 200px) and (max-width: 450px) {
