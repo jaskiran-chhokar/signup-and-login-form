@@ -1,189 +1,305 @@
+@charset "utf-8";
+/* CSS Document */
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    height: 100%;
-    margin-top: 20px;
-    background-image: url(../assets/back2.jpeg);
-    background-attachment: fixed;
-    background-position: center; 
-    background-repeat: no-repeat;
+  height: 100vh;
 }
 
 body {
-    font-family: 'Raleway', arial, verdana;
-    background: transparent;
-    overflow-x: hidden;
+  background-image: url(LoginBG.jpeg);
+  background-repeat: no-repeat;
+  font-family: "Raleway", arial, verdana;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
-#msform {
-    text-align: center;
-    position: relative;
-    left: -70px;
-    margin-top: 50px;
-    width: 800px;
-    height: 700px;
+#Login {
+  text-align: center;
+  position: relative;
+  left: -70px;
+  margin-top: 20%;  /*used to be 50px */ 
+  width: 800px;
+  height: 700px;
 }
 
-#msform fieldset {
-    background: white;
-    opacity: 1;
-    border: 0 none;
-    border-radius: 0px;
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    padding: 30px 40px;
-    box-sizing: border-box;
-    width: 80%;
-    margin: 0 10%;
-    position: relative;
+#Login fieldset {
+  background: white;
+  opacity: 1;
+  border: 0 none;
+  border-radius: 0px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 30px 40px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
 }
 
-#msform fieldset:not(:first-of-type) {
-    display: none;
+#Login fieldset:not(:first-of-type) {
+  display: none;
 }
 
-#msform input, #msform textarea {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    width: 95%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    font-size: 13px;
+#Login input,
+#Login textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 95%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 13px;
 }
 
-#msform input:focus, #msform textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid #667eea;
-    outline-width: 0;
-    transition: All 0.5s ease-in;
-    -webkit-transition: All 0.5s ease-in;
-    -moz-transition: All 0.5s ease-in;
-    -o-transition: All 0.5s ease-in;
+#Login input:focus,
+#Login textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
 }
 
-#msform .action-button {
-    width: 175px;
-    height: 45px;
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    color: white;
-    border: 0 none;
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px;
-    font-size: 13px;
-    letter-spacing: 0.06em;
+#Login .action-button {
+  width: 175px;
+  height: 45px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: 0 none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
 }
 
-#msform .action-button-2 {
-    width: 70px;
-    height: 45px;
-    color: #5991b2;
-    text-decoration: underline;
-    background: #fff;
-    border: 0 none;
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px;
-    font-size: 15px;
-    letter-spacing: 0.06em;
+#Login .action-button-1 {
+  width: 100%;
+  height: 45px;
+  color: #5991b2;
+  text-decoration: underline;
+  background: #fff;
+  border: 0 none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  font-size: 14px;
+  letter-spacing: 0.06em;
 }
 
-#msform .action-button:hover, #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px 
-    #8bde93;
+#Login .action-button-1:active {
+  border: none !important;
 }
 
-#msform .action-button-previous {
-    width: 70px;
-    height: 45px;
-    background-color: #fff; 
-    color: #5991b2;
-    text-decoration: underline;
-    border: 0 none;
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 0px;
-    
-    font-size: 15px;
-    letter-spacing: 0.06em;
+#Login .action-button-2 {
+  width: 70px;
+  height: 45px;
+  background-color: #fff;
+  color: #5991b2;
+  text-decoration: underline;
+  border: 0 none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 0px;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+#Login .form-text {
+  text-align: center;
+  color:#5991b2;
+}
+
+#Login .span-signup {
+  margin-right: 0px;
+  font-size: 15px;
+}
+
+input#forgot-password {
+  padding-bottom: 0 !important; 
+  margin-bottom: 0 !important;
+}
+
+input#go-to-signup {
+  width:75px !important;
+}
+
+#go-to-login {
+  width: 60px !important;
+  margin-left: 0 !important;
+  background-color: #fff !important;
 }
 
 .fs-title {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #2C3E50;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .fs-subtitle {
-    font-weight: normal;
-    font-size: 15px;
-    color: #666;
-    margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
 }
+
+/* progress bar & indicator styles below */
 
 #progressbar {
-    margin-bottom: 30px;
-    overflow: hidden;
-    margin-left: 90px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  margin-left: 90px;
 }
 
-#progressbar li {
-    list-style-type: none;
-    color:#fff; 
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 500;
-    width: 33.33%;
-    float: left;
-    position: relative;
-    letter-spacing: 1px;
+progress {
+  display: block;
+  position: relative;
+  top: -40px;
+  left: 82px;
+  background-color: #fff !important;
+  width: 80%;
+  height: 2px;
 }
 
-#progressbar li:before {
-    content: ' ';
-    width: 24px;
-    height: 24px;
-    line-height: 26px;
-    display: block;
-    font-size: 12px;
-    color: #333;
-    background: white;
-    border-radius: 25px;
-    margin: 0 auto 10px auto;
+progress::-webkit-progress-bar {
+  background-color: #fff;
 }
 
-#progressbar li:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: white;
-    position: absolute;
-    left: -50%;
-    top: 9px;
-    z-index: -1;
+progress::-webkit-progress-value {
+  background-color: #fff;
 }
 
-#progressbar li:first-child:after {
-    content: '';
+.form-progress-indicator {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
 }
 
-#progressbar li.active:before, #progressbar li.active:after {
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    border: 1px solid #fff;
-    color: white;
+li:hover {
+  cursor: pointer;
+}
+
+div.li-text {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  width: 200px;
+  margin-top: 35px;
+  position: relative;
+  right: 87px;
+}
+
+.form-progress-indicator.one {
+  left: 10%;
+}
+.form-progress-indicator.two {
+  left: 49%;
+}
+.form-progress-indicator.three {
+  left: 88%;
+}
+
+.form-progress-indicator.active {
+  content: " ";
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: 1px solid #fff;
+  color: white;
+}
+
+/* media queries */
+@media screen and (min-width: 1410px) {
+  #Login {
+    margin-top: 20%;
+  }
+}
+
+/* media queries */
+@media screen and (max-width: 1400px) {
+  #Login {
+    margin-top: 10%;
+  }
+}
+
+/* MEDIA QUERIES */ 
+@media screen and (min-width: 1922px) and (max-width: 2350px) {
+    .container {
+        margin: auto !important; 
+        width: 35% !important;  
+    }
+}
+
+@media screen and (min-width: 1850px) and (max-width: 1921px) {
+    .container {
+        width: 40% !important;  
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1849px) {
+    .container {
+        width: 40%; 
+    }
+}
+
+@media screen and (min-width: 1413px) and (max-width: 1599px) {
+    .container {
+        width: 45%; 
+    }
+}
+
+@media screen and (min-width: 1314px) and (max-width: 1412px) {
+    .container {
+        width: 50%; 
+    }
+}
+
+@media screen and (min-width: 1182px) and (max-width: 1313px) {
+    .container {
+        width: 55%; 
+    }
+}
+
+@media screen and (min-width: 1087px) and (max-width: 1181px) {
+    .container {
+        width: 60%; 
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1086px) {
+    .container {
+        width: 65%; 
+        margin-top: 10%; 
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 999px) {
+    .container {
+        width: 70%; 
+        margin-top: 10%; 
+    }
 }
