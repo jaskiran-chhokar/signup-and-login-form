@@ -310,4 +310,9 @@ div.li-text {
     #Login input, #Login textarea {
         font-size: 16px; 
     }
+    #Login fieldset {
+        width: 100%; 
+        padding: 80px 40px; 
+        margin: 0 auto; 
+    }
 }
